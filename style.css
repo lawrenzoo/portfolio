@@ -319,10 +319,12 @@ li a:hover, li a.active{
     gap: 0.6rem;
     margin-top: 0.6rem;
     margin-bottom: 0.6rem;
+    width: 100%;
 }
 #name, #email, #subject, #number{
     background-color: var(--extra-hover);
     height: 40px;
+    width: 100%;
     outline: none;
     color: white;
     border-radius: 0.6rem;
@@ -361,9 +363,19 @@ span{
     }
 }
 @media(max-width:768px){
-    header, .about, .skills, .projects, nav{
+    nav{
+        /* border: 2px solid red; */
         padding: 2rem;
     }
+    header, .about, .skills, .projects, .contacts{
+        /* border: 2px solid green; */
+        padding: 2rem;
+        width: 100%;
+    }
+   .contacts-container{
+    border: 2px solid purple;
+    width: 80%;
+   }
     nav ul{
         display: none;
     }
@@ -422,4 +434,20 @@ span{
     p{
         text-align: center;
     }
+    .intro-text h1 {
+        font-size: 2rem;
+    }
+}
+@media (max-width: 480px) {
+    .intro-text h1 {
+        font-size: 1.5rem; /* Smaller headings for mobile */
+    }
+    .socials i {
+        font-size: 1.2rem; /* Adjust icon size for mobile */
+    }
+    nav ul.show{
+        padding: 1rem;
+        margin: 0;
+    }
+
 }
